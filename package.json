@@ -1,0 +1,28 @@
+{
+  "name": "vacation-management-app",
+  "version": "1.0.0",
+  "description": "Vacation Management System - Full Stack Application",
+  "private": true,
+  "scripts": {
+    "test": "docker-compose -f docker-compose.test.yml up --build --abort-on-container-exit --exit-code-from server-test && docker-compose -f docker-compose.test.yml down -v",
+    "test:watch": "cd server && npm run test:watch",
+    "start": "docker-compose up -d",
+    "start:build": "docker-compose up --build -d",
+    "start:with-tests": "node run-tests-then-start.js",
+    "stop": "docker-compose down",
+    "stop:clean": "docker-compose down -v",
+    "logs": "docker-compose logs -f",
+    "logs:server": "docker-compose logs -f server",
+    "logs:client": "docker-compose logs -f client"
+  },
+  "keywords": [
+    "vacation",
+    "management",
+    "typescript",
+    "vue",
+    "express",
+    "postgres"
+  ],
+  "author": "",
+  "license": "ISC"
+}

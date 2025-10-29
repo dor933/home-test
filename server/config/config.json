@@ -1,0 +1,25 @@
+{
+  "development": {
+    "username": "vacation_user",
+    "password": "vacation_pass",
+    "database": "vacation_management_dev",
+    "host": "postgres",
+    "port": 5432,
+    "dialect": "postgres",
+    "logging": false
+  },
+  "test": {
+    "username": "vacation_user",
+    "password": "vacation_pass",
+    "database": "vacation_management_test",
+    "host": "postgres-test",
+    "port": 5432,
+    "dialect": "postgres",
+    "logging": false
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres",
+    "logging": false
+  }
+}
