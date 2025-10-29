@@ -189,11 +189,13 @@ DATABASE MODELS:
    - status: ENUM('Pending', 'Approved', 'Rejected') - State machine pattern
    - comments: TEXT (nullable) - Manager feedback
    - timestamps: created_at, updated_at (automatic)
-   - UNIQUE INDEX: (user_id, start_date, end_date) - Prevents duplicate requests
+   - UNIQUE INDEX: (user_id, start_date, end_date) - Prevents duplicate requests, and used as unique identifier in the server - prevents passing uuid to the client.
    
    Relationship: One-to-Many (User -> VacationRequest)
    - CASCADE delete: When user deleted, their requests are removed
    - Bidirectional navigation in ORM for efficient queries
+
+
 
 ARCHITECTURE PATTERN:
    - Layered Architecture (Controller -> Service -> Model)
